@@ -12,7 +12,7 @@ function Orders() {
   const getOrders = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/orders/my-orders",
+        "/api/orders/my-orders",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -49,7 +49,7 @@ function Orders() {
       setMessage("");
 
       const response = await axios.post(
-        "http://localhost:5000/api/orders",
+        "/api/orders",
         {
           shippingAddress: address,
         },

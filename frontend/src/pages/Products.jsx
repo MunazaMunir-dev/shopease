@@ -8,7 +8,7 @@ function Products() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/products")
+      .get("/api/products")
       .then((response) => {
         setProducts(response.data.products || []);
         setLoading(false);
@@ -30,7 +30,7 @@ function Products() {
 
     try {
       await axios.post(
-        "http://localhost:5000/api/cart/add",
+        "/api/cart/add",
         {
           productId,
           quantity: 1,
